@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f6fa;
+    --text-color: #2d3436;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+    border-radius: var(--border-radius);
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+.upload-area.drag-over {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.info-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill-tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.matched-jobs {
+    display: grid;
+    gap: 1rem;
+}
+
+.job-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateX(5px);
+}
+
+.job-title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.job-company {
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.job-location {
+    color: #b2bec3;
+    font-size: 0.8rem;
+}
+
+.job-skills {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.match-score {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Loading Spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+} 
